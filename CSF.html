@@ -1,0 +1,75 @@
+<!-- Vicente González Ruiz -->
+<!DOCTYPE html>
+
+  <head>
+    <title>
+      The Contrast Sensitivity Function
+    </title>
+  </head>
+  
+  <body>
+    
+    <h1>
+      The Contrast Sensitivity Function
+    </h1>
+    
+    <p>
+      The CSF is the curve defined by those points that define the
+      lowest contrast levels that you can detect for each spatial
+      frecuency tested of the following image (click on the button
+      below to generate the image):
+    </p>
+    
+     <br>
+     Attenuation: <input type="range" id="attenuationRange" min="0" step="0.1" max="5" value="3">
+     Frequency: <input type="range" id="frequencyRange" min="0" step="0.1" max="10" value="5">
+     <button onclick="draw()">Click me!</button>
+     <p id="attenuationId"</p>
+     <p id="frequencyId"></p>
+ 
+     <canvas id="canvas2" width="1024", height="1024">
+       Your browser does not support canvas!
+     </canvas>
+
+     <script type="text/javascript">
+       function draw() {
+	   element = document.getElementById("canvas2");
+	   c = element.getContext("2d");
+
+	   // read the width and height of the canvas
+	   width = element.width;
+	   height = element.height;
+
+	   // create a new pixel array
+	   imageData = c.createImageData(width, height);
+      
+	   attenuation = document.getElementById("attenuationRange").value;
+	   document.getElementById("attenuationId").innerHTML = attenuation;
+	   frequency = document.getElementById("frequencyRange").value;
+	   document.getElementById("frequencyId").innerHTML = frequency;
+	   for(y=0; y<height; y++) {
+               for(x=0; x<width; x++) {
+		   t = (1+Math.sin(width/Math.log(x*frequency)))*(y/Math.exp(attenuation));
+		   imageData.data[(y*4)*width+((width-x)*4)+0] = t;
+		   imageData.data[(y*4)*width+((width-x)*4)+1] = t;
+		   imageData.data[(y*4)*width+((width-x)*4)+2] = t;
+		   imageData.data[(y*4)*width+((width-x)*4)+3] = 255; // opaque alpha
+	       }
+	   }
+	   // copy the image data back onto the canvas
+	   c.putImageData(imageData, 0, 0); // at coords 0,0
+       }
+
+       draw();
+
+    </script>
+
+    <h2>
+    <var>
+    CSF = sin(log(x))/y
+    </var>
+    </h2>
+
+  </body>
+      
+</html>
