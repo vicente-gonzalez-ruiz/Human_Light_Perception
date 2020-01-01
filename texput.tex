@@ -15,7 +15,8 @@ level~\cite{taubman2012jpeg2000}. See
   Fig.~\ref{fig:light_perception_threshold}.
 
 \begin{figure}
-  \myfig{data/umbral_de_vision}{6cm}{600} %
+  %\includegraphics[width=12cm]{umbral_de_vision}%{6cm}{600} %
+  \svg{umbral_de_vision}{600}
   \caption{Perception threshold of the light intensity.} %
   \label{fig:light_perception_threshold}
 \end{figure}
@@ -40,7 +41,7 @@ images than to variations of the high frequencies. See the
 See Fig~\ref{fig:perceived_luminance_along_time}.
 
 \begin{figure}
-  \myfig{data/punto_y_difuminado}{6cm}{600} %
+  \png{punto_y_difuminado}%{6cm}{600} %
   \caption{Perceived luminance along time. Fixing the eyes on the black point, the gray outline should disappear.} %
   \label{fig:perceived_luminance_along_time}
 \end{figure}
@@ -54,7 +55,7 @@ Enter a darkened room (with a very low level of illumination) from another room 
 This is also shown in the following image (when looking at the white circles, we will see that only when we look at them they look white, others look black). See Fig~\ref{fig:perceived_luminance_vs_angle}.
 
 \begin{figure}
-  \myfig{data/rectangulos_negros}{8cm}{800} %
+  \png{rectangulos_negros}%{8cm}{800} %
   \caption{Perceived luminance depending on the vision angle.} %
   \label{fig:perceived_luminance_vs_angle}
 \end{figure}
@@ -64,8 +65,8 @@ This is also shown in the following image (when looking at the white circles, we
 The level of perceived luminance does not depend only on the intensity at a point, but also depends on the intensity of the neighboring points. See Fig~\ref{fig:simultaneous_contrast}.
 
 \begin{figure}
-  \myfig{data/escaleras1}{8cm}{800} %
-  \myfig{data/contraste_simultaneo}{8cm}{800} %
+  \png{escaleras1}%{8cm}{800} %
+  \png{contraste_simultaneo}%{8cm}{800} %
   \caption{Simultaneous contrast. The intensity of the internal square always have the same intensity.} %
   \label{fig:simultaneous_contrast}
 \end{figure}
@@ -76,7 +77,7 @@ The HVS tends to overestimate the boundaries between objects.
 The HVS is more sensitive to yellow and green than blue or red (these are less dazzling). See Fig~\ref{fig:color_perception}.
 
 \begin{figure}
-  \myfig{data/espectro_visible}{8cm}{800} %
+  \png{espectro_visible}%{8cm}{800} %
   \caption{Color perception. All colors appear exactly with the same intensity} %
   \label{fig:color_perception}
 \end{figure}
@@ -84,7 +85,7 @@ The HVS is more sensitive to yellow and green than blue or red (these are less d
 Relative sensibility to the color (see Fig.~\ref{fig:color_relative_sensibility}) causes, for example, that when we spend enough time in a room with only red light or wear red glasses, the threshold of vision is very low (almost the same as we would have achieved if we stayed a long time in the dark).
 
 \begin{figure}
-  \myfig{data/data/sensibilidad_relativa}{8cm}{800} %
+  \png{sensibilidad_relativa}%{8cm}{800} %
   \caption{Relative sensitivity of the HVS depending on the color.} %
   \label{fig:color_relative_sensibility}
 \end{figure}
@@ -112,8 +113,8 @@ For example, in the vintage cinema 24 FPS are presented, although each frame is 
 The HVV tends to recognize more easily the areas of an image that have simple forms or that form textures, as opposed to others that are not more complex (such as ``noise''). Thanks to this, there are the CAPTCHAs (Completely Automated Public Turing Test to Tell Computers and Hummands Apart), images that hide the information by putting characters on noisy backgrounds. See Fig.~\ref{fig:cpatcha}.
 
 \begin{figure}
-  \myfig{data/noisy_CAPTCHA}{4cm}{400} %
-  \myfig{data/CAPTCHA_theater}{4cm}{400} %
+  \png{noisy_CAPTCHA}%{4cm}{400} %
+  \png{CAPTCHA_theater}%{4cm}{400} %
   \caption{Different captchas.} %
   \label{fig:cpatcha}
 \end{figure}
@@ -127,7 +128,7 @@ The HVS needs a specific time to perceive the appearance of a certain region of 
 The HVS perceives the distance to the objects depending on the color and the area of the sensitized retina. Here we have some examples (in the Fig.~\ref{fig:depth} the red squares seem to be at a different distance than the blue squares).
 
 \begin{figure}
-  \myfig{data/cuadrados_rojo_y_azules}{8cm}{800} %
+  \png{cuadrados_rojo_y_azules}%{8cm}{800} %
   \caption{Simulating depth.} %
   \label{fig:depth}
 \end{figure}
@@ -135,15 +136,15 @@ The HVS perceives the distance to the objects depending on the color and the are
 Moving away or getting closer to the image of the Fig~\ref{fig:rotating}, and looking at the black point, we will appreciate how the outer rings will rotate in the opposite direction. This is because the relative position of the objects that appear in the visual scene depends on the area of the sensitized retina.
 
 \begin{figure}
-  \myfig{data/rueda}{8cm}{800} %
-  \caption{Simulating rotation.} %
+  \png{rueda}%{8cm}{800} %
+  \caption{Perceiving rotation.} %
   \label{fig:rotating}
 \end{figure}
 
 The image of the Fig.~\ref{fig:limit} puts the perceptive capacity of the SVH to the limit. It is a very high frequency image in which a pair of patterns are repeated periodically. After looking at it for a while, only the part of the image that falls on the fovea is perceived without oscillation (without apparent movement).
 
 \begin{figure}
-  \myfig{data/mareo}{8cm}{800} %
+  \png{mareo}%{8cm}{800} %
   \caption{Simulating depth.} %
   \label{fig:limit}
 \end{figure}
@@ -151,17 +152,17 @@ The image of the Fig.~\ref{fig:limit} puts the perceptive capacity of the SVH to
 The light that falls on the blind spot is not used in the vision process. See Fig~\ref{fig:bind_spot}.
 
 \begin{figure}
-  \myfig{data/punto_ciego}{8cm}{800} %
+  \png{punto_ciego}%{8cm}{800} %
   \caption{Effect of the bind spot. ith the right eye covered, look at the X and vice versa. If the point does not disappear, get closer or stay away from the image.} %
   \label{fig:bind_spot}
 \end{figure}
 
 \section{Visual masking in the space domain}
 Similar spatial frequencies can mask each other if they have similar
-orientations and are localized in the same area. See Fig~\ref
+orientations and are localized in the same area. See Fig~\ref{fig:visual_masking}.
   
 \begin{figure}
-  \myfig{data/visual_masking}{8cm}{800} %
+  \png{visual_masking}%{8cm}{800} %
   \caption{Visual masking between a single artifact and Gaussign
     noise, both produced in the wavelet
     domain.~\cite{taubman2012jpeg2000}}
@@ -172,4 +173,4 @@ orientations and are localized in the same area. See Fig~\ref
 The movement of a object can mask the movement of a different object
 in the same scene, being normally the smaller object the masked one.
 
-\bibliography{video-compression}
+\bibliography{signal-processing, video-compression, JPEG2000}
